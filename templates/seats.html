@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seats</title>
+</head>
+<body>
+    <h1>Seats</h1>
+    <p>Welcome, {{ username }}!</p>
+    <ul>
+        {% for room in study_rooms %}
+        <li>{{ room }} - Total Seats: {{ total_seats[room] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>

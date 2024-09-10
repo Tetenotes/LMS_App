@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ username }}!</h1>
+    <h2>Seat Utilization</h2>
+    <table border="1">
+        <tr>
+            <th>Study Room</th>
+            <th>Vacant Seats</th>
+            <th>Total Seats</th>
+        </tr>
+        {% for room, vacant, total in seat_utilization %}
+        <tr>
+            <td>{{ room }}</td>
+            <td>{{ vacant }}</td>
+            <td>{{ total }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/logout">Logout</a>
+</body>
+</html>
